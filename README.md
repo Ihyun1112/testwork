@@ -26,4 +26,7 @@
 - [x] 디자인기획
 - [ ] 웹개발
 
+## 4.참고사항
+[홈페이지](https://ihyun1112.github.io/testwork/)
+
 
