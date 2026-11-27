@@ -30,7 +30,7 @@
 [홈페이지](https://ihyun1112.github.io/testwork/)
 
 ## 5.코드처리사항
-``` python
+``` javascript
 print("Hello World!!");
 arr[1,2,3,4,5]
 ```
