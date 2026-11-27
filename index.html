@@ -1,0 +1,371 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Study Archive</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
+    background: #f5f7fb;
+    color: #263248;
+}
+
+/* 헤더 */
+header {
+    background: #17243a;
+    color: white;
+    padding: 22px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 21px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 14px;
+}
+
+/* 메인 배너 */
+.hero {
+    background: #17243a;
+    color: white;
+    padding: 65px 8% 55px;
+}
+
+.hero .tag {
+    color: #8dbbff;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    line-height: 1.5;
+    margin: 20px 0;
+}
+
+.hero h1 span {
+    color: #8dbbff;
+}
+
+.hero p {
+    color: #d1d9e5;
+    line-height: 1.8;
+}
+
+/* 통계 */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 35px;
+}
+
+.stat {
+    background: #304a6b;
+    padding: 22px;
+    border-radius: 12px;
+}
+
+.stat h2 {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+/* 본문 */
+.container {
+    max-width: 1150px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-size: 23px;
+    margin-bottom: 22px;
+}
+
+/* 카테고리 */
+.categories {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.category {
+    background: white;
+    padding: 25px;
+    border-radius: 14px;
+    border: 1px solid #e8edf4;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px #17243a15;
+}
+
+.category .icon {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.category h3 {
+    margin-bottom: 8px;
+}
+
+.category p {
+    color: #8490a3;
+    font-size: 13px;
+}
+
+/* 학습 기록 */
+.records {
+    background: white;
+    border-radius: 14px;
+    padding: 10px 25px;
+    border: 1px solid #e8edf4;
+}
+
+.record {
+    padding: 22px 0;
+    border-bottom: 1px solid #edf0f5;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.record:last-child {
+    border-bottom: none;
+}
+
+.record small {
+    display: block;
+    color: #8994a6;
+    margin-top: 8px;
+}
+
+.status {
+    background: #e7f5ec;
+    color: #27834a;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    height: fit-content;
+}
+
+/* 하단 */
+.message {
+    background: #eaf1fb;
+    padding: 30px;
+    border-radius: 14px;
+    margin-top: 35px;
+}
+
+footer {
+    background: #17243a;
+    color: #d1d9e5;
+    text-align: center;
+    padding: 30px;
+    font-size: 13px;
+    margin-top: 70px;
+}
+
+/* 모바일 */
+@media(max-width: 768px) {
+    header {
+        padding: 20px;
+    }
+
+    nav a {
+        margin-left: 10px;
+        font-size: 12px;
+    }
+
+    .hero {
+        padding: 45px 20px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .categories {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stats {
+        gap: 8px;
+    }
+
+    .stat {
+        padding: 15px;
+    }
+
+    .stat h2 {
+        font-size: 23px;
+    }
+}
+
+@media(max-width: 400px) {
+    .categories {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- 상단 메뉴 -->
+<header>
+    <div class="logo">📚 MY STUDY ARCHIVE</div>
+
+    <nav>
+        <a href="#home">HOME</a>
+        <a href="#study">STUDY</a>
+        <a href="#records">RECORD</a>
+    </nav>
+</header>
+
+<!-- 메인 배너 -->
+<section class="hero" id="home">
+
+    <div class="tag">PERSONAL KNOWLEDGE BASE</div>
+
+    <h1>
+        배움의 기록,<br>
+        <span>성장의 과정.</span>
+    </h1>
+
+    <p>
+        공부한 것을 기록하고, 정리하고,<br>
+        나만의 지식으로 만들어가는 공간입니다.
+    </p>
+
+    <div class="stats">
+
+        <div class="stat">
+            <h2>128</h2>
+            <p>학습 노트</p>
+        </div>
+
+        <div class="stat">
+            <h2>12</h2>
+            <p>학습 분야</p>
+        </div>
+
+        <div class="stat">
+            <h2>45</h2>
+            <p>학습 기록일</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- 학습 카테고리 -->
+<main class="container" id="study">
+
+    <h2 class="section-title">📚 나의 학습 분야</h2>
+
+    <div class="categories">
+
+        <div class="category" onclick="showCategory('프로그래밍')">
+            <div class="icon">💻</div>
+            <h3>프로그래밍</h3>
+            <p>개발 · 코딩 · 기술</p>
+        </div>
+
+        <div class="category" onclick="showCategory('인공지능')">
+            <div class="icon">🧠</div>
+            <h3>인공지능</h3>
+            <p>AI · 데이터 · 자동화</p>
+        </div>
+
+        <div class="category" onclick="showCategory('독서 및 지식')">
+            <div class="icon">📖</div>
+            <h3>독서 및 지식</h3>
+            <p>독서 · 인문학 · 교양</p>
+        </div>
+
+        <div class="category" onclick="showCategory('자기계발')">
+            <div class="icon">📈</div>
+            <h3>자기계발</h3>
+            <p>습관 · 경영 · 경제</p>
+        </div>
+
+    </div>
+
+    <!-- 최근 학습 기록 -->
+    <section id="records" style="margin-top:55px">
+
+        <h2 class="section-title">📝 최근 학습 기록</h2>
+
+        <div class="records">
+
+            <div class="record">
+                <div>
+                    <h3>인공지능 기초 개념 정리</h3>
+                    <small>2026.11.25 · 인공지능</small>
+                </div>
+                <span class="status">완료</span>
+            </div>
+
+            <div class="record">
+                <div>
+                    <h3>Python 데이터 처리</h3>
+                    <small>2026.11.23 · 프로그래밍</small>
+                </div>
+                <span class="status">복습 중</span>
+            </div>
+
+            <div class="record">
+                <div>
+                    <h3>효율적인 학습 방법</h3>
+                    <small>2026.11.20 · 자기계발</small>
+                </div>
+                <span class="status">정리 중</span>
+            </div>
+
+        </div>
+
+    </section>
+
+    <div class="message">
+        <h2>오늘도 한 걸음 성장하기 ✨</h2>
+        <p style="margin-top:10px;color:#68768b">
+            오늘 배운 지식이 내일의 실력이 됩니다.
+        </p>
+    </div>
+
+</main>
+
+<footer>
+    MY STUDY ARCHIVE<br><br>
+    개인 학습 기록 공간 © 2026
+</footer>
+
+<script>
+function showCategory(category) {
+    alert(category + " 카테고리를 선택했습니다.");
+}
+</script>
+
+</body>
+</html>
